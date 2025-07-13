@@ -30,7 +30,7 @@ data = generate_bio(style)
 print("your new bio: \n")
 
 print("*" * 50)
-print(textwrap.dedent(data))
+print(textwrap.dedent(data)) # the dedent function of textwrap is used to remove any leading whitespaces
 print("*" * 50)
 
 
@@ -40,7 +40,7 @@ choice = input(print("enter yes or no: ")).lower()
 if choice == "yes":
     file_name = f"{name.lower()}_bio.txt"
 
-    with open(file_name , "w" , encoding = "utf-8") as f:
+    with open(file_name , "w" , encoding = "utf-8") as f: #encoding means saving all the data as bytes and utf-8 is just one style of encoding
         f.write(data)
 
     print("file saved")
