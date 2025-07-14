@@ -16,9 +16,15 @@ while True:
         age = float(input("enter your age in years: "))
         days , hours , minutes = calculate_time(age)
 
-        print(f"\nyou have lived {days} days")
-        print(f"you have lived {hours} hours")
-        print(f"you have lived {minutes} minutes\n")
+        #comma formatting
+        formatted_days = format(days , ",")
+        formatted_hours = format(hours , ",")
+        formatted_minutes = format(minutes , ",")
+
+        print(f"\nyou have lived {formatted_days} days")
+        print(f"you have lived {formatted_hours} hours")
+        print(f"you have lived {formatted_minutes} minutes\n")
+        
 
         choice = input("would you like to try again(yes/no): ").lower()
 
