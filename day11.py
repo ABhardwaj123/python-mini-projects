@@ -29,7 +29,7 @@ if choice == 'e':
     try:
         key = int(input("enter your key(from 1 to 25): "))
         encryption = encrypt(message , key)
-        print("your enctryted message is: \n")
+        print("\nyour enctryted message is: ")
         print(encryption)
     except ValueError:
         print("invalid key")
@@ -40,7 +40,7 @@ elif choice == 'd':
     try:
         key = int(input("enter your key(from 1 to 25): "))
         decryption = decrypt(message , key)
-        print("your decrypted message is: \n")
+        print("\nyour decrypted message is: ")
         print(decryption)
     except ValueError:
         print("invalid key")
