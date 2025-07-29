@@ -22,6 +22,7 @@ def flatten_json(data, parent_key = '', seperator = '.'): #because its a nested 
         for idx, item in enumerate(data):
             full_key = f"{parent_key}{seperator}{idx}" if parent_key else str(idx)
             items.update(flatten_json(item, full_key ,seperator=seperator))
+            
     else: #if data is a normal key value pair
         items[parent_key] = data
 
