@@ -17,7 +17,7 @@ def get_h2_header(url):
         return []
     
     #parser->converts text to designated parser(maybe html parser , json parser etc)
-    soup = BeautifulSoup(response.text , "html.parser")
+    soup = BeautifulSoup(response.text , "html.parser") #response.text contains all the html content of web page
     h2_tags = soup.find_all("h2")
 
     #printing all tags
@@ -26,9 +26,9 @@ def get_h2_header(url):
     headers = []
 
     for tag in h2_tags:
-        header_text = tag.get_text(strip = True)
+        header_text = tag.get_text(strip = True) #.get_text used to get text inside the html tag(h2 tag in this case)
 
-        if header_text and header_text.lower() != "contents":
+        if header_text and header_text.lower() != "contents": #we are trying to ignore the contents header
             headers.append(header_text)
 
 
